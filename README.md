@@ -16,42 +16,55 @@ Task 2:
 
 with python 
 
-for i in range(1,101):
+for i in range(1, 101):
+    affiche = False
 
-    if i%3==0:
+    if i % 3 == 0:
+        print("Hello", end='')
+        affiche = True
+    if i % 5 == 0:
+        print("World", end='')
+        affiche = True
+    if i % 7 == 0:
+        print("Yoo", end='')
+        affiche = True
+    if not affiche:
+        print(i, end='')
 
-        print('hello', end=', ')
+    if i < 100:
+        print(", ", end='')
 
-    elif i%5==0:
-
-        print('world', end=', ')
-
-    elif i%7==0:
-
-        print('yoo', end=', ')
-
-    else:
-
-        print(i, end=', ')
+print()
 
 
 with Java:
-public class Main {
+public class Task2Algo {
     public static void main(String[] args) {
-        
+        for (int i = 1; i <= 100; i++) {
+            boolean affiche = false;
 
-        for(int i=1;i<101;i++){
-            if( i%3==0){
-                System.out.print("Hello, ");
-            } else if (i%5==0) {
-                System.out.print("wordl, ");
-            } else if (i%7==0) {
-                System.out.print("yoo, ");
-            }else{
-                System.out.print(i+", ");
+            if (i % 3 == 0) {
+                System.out.print("Hello");
+                affiche = true;
+            }
+            if (i % 5 == 0) {
+                System.out.print("World");
+                affiche = true;
+            }
+            if (i % 7 == 0) {
+                System.out.print("Yoo");
+                affiche = true;
+            }
+            if (!affiche) {
+                System.out.print(i);
             }
 
+            if (i < 100) {
+                System.out.print(", ");
+            }
         }
+        System.out.println();
     }
 }
+
 
