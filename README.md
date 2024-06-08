@@ -17,13 +17,21 @@ Task 2:
 with python 
 
 for i in range(1,101):
+
     if i%3==0:
+
         print('hello', end=', ')
+
     elif i%5==0:
+
         print('world', end=', ')
+
     elif i%7==0:
+
         print('yoo', end=', ')
+
     else:
+
         print(i, end=', ')
 
 
